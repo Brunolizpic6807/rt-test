@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Procvičování RT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Procvičování revizních testů – Hromosvody</h1>
+  <div id="app"></div>
+  <button id="next-btn" style="display:none;">Další otázka</button>
+
+  <script src="questions.js"></script>
+  <script>
+    const app = document.getElementById("app");
+    const nextBtn = document.getElementById("next-btn");
+
+    let currentIndex = 0;
+
+    function renderQuestion() {
+      const q = questions[currentIndex];
+      app.innerHTML = `
+        <div class="question">
+          <p><strong>${currentIndex + 1}. ${q.question}</strong></p>
+          <ul id="options">
+            ${["A", "B", "C"].map(letter => `
+              <li>
+                <button data-letter="${letter}">${letter}) ${q.answers[letter]}</button>
+              </li>
+            `).join("")}
+          </ul>
+        </div>
+      `;
+      document.querySelectorAll("button[data-letter]").forEach(btn => {
+        btn.addEventListener("click", () => checkAnswer(btn));
+      });
+    }
+
+    function checkAnswer(button) {
+      const selected = button.getAttribute("data-letter");
+      const q = questions[currentIndex];
+      const buttons = document.querySelectorAll("button[data-letter]");
+      buttons.forEach(btn => {
+        const letter = btn.getAttribute("data-letter");
+        if (letter === q.correct) {
+          btn.classList.add("correct");
+        } else {
+          btn.classList.add("incorrect");
+        }
+        btn.disabled = true;
+      });
+      nextBtn.style.display = "inline-block";
+    }
+
+    nextBtn.onclick = () => {
+      currentIndex++;
+      if (currentIndex < questions.length) {
+        renderQuestion();
+        nextBtn.style.display = "none";
+      } else {
+        app.innerHTML = "<h2>Hotovo! Procvičování dokončeno 🎉</h2>";
+        nextBtn.style.display = "none";
+      }
+    };
+
+    renderQuestion();
+  </script>
+</body>
+</html>
