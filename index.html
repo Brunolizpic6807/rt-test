@@ -18,7 +18,1001 @@
     <div id="question-container" class="question-box"></div>
     <button id="next-btn" style="display: none;">Další otázka</button>
     <script>
-        let questions = [];
+        let questions = [
+  {
+    "id": "1",
+    "question": "Jak je charakterizována doba trvání blesku T?",
+    "options": {
+      "A": "doba vyjádřená časovým integrálem bleskového proudu za celou dobu trvání úderu blesku",
+      "B": "doba, než bleskový proud dosáhne nejvyšší hodnoty",
+      "C": "doba, po kterou v místě úderu protéká bleskový proud"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "2",
+    "question": "Jak lze charakterizovat chráněnou stavbu?",
+    "options": {
+      "A": "stavba umístěná v ochranném pásmu vedlejšího objektu",
+      "B": "stavba, pro kterou se vyžaduje ochrana před účinky blesku",
+      "C": "podzemní inženýrská síť připojená ke stavbě"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "3",
+    "question": "Jak je charakterizována rázová vlna?",
+    "options": {
+      "A": "jako zóna ochrany před bleskem kde dojde k přímému úderu",
+      "B": "jako přechodná vlna způsobená LEMP projevující se jako přepětí a/nebo impulsní proud",
+      "C": "jako prudký nárůst napětí na podzemní inženýrské síti připojené ke stavbě"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "4",
+    "question": "Normy řady ČSN EN 62305 využívají v celém rozsahu zkrácené názvy. Co znamená označení LPZ?",
+    "options": {
+      "A": "označení hromosvodní ochrany",
+      "B": "zóna ochrany před bleskem",
+      "C": "pravděpodobnosti ochrany před bleskem"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "5",
+    "question": "Normy řady ČSN EN 62305 využívají v celém rozsahu zkrácené názvy. Co znamená označení LPL?",
+    "options": {
+      "A": "hladina ochrany před bleskem",
+      "B": "zóna ochrany před bleskem",
+      "C": "pravděpodobnosti ochrany před bleskem"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "6",
+    "question": "Normy řady ČSN EN 62305 využívají v celém rozsahu zkrácené názvy. Co znamená označení LPS?",
+    "options": {
+      "A": "systém ochrany před bleskem",
+      "B": "hladina ochrany před bleskem",
+      "C": "zóna ochrany před bleskem"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "7",
+    "question": "Normy řady ČSN 62305 využívají v celém rozsahu zkrácené názvy. Co znamená označení SPD?",
+    "options": {
+      "A": "zóna ochrany před bleskem",
+      "B": "přepěťové ochranné zařízení určené k omezení přechodných přepětí",
+      "C": "hladina ochrany před bleskem"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "8",
+    "question": "Podle řady ČSN EN 62305 jsou znázorněny příčiny a typy poškození staveb a sítí písmeny S1, S2, S3, S4. Co toto označení představuje?",
+    "options": {
+      "A": "klasifikaci úrazů osob krokovými a dotykovými napětími",
+      "B": "stupeň přímého mechanického poškození stavby",
+      "C": "poškození způsobené údery do stavby, v blízkosti stavby, do sítí a v jejich blízkosti"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "9",
+    "question": "Jaká je maximální uvažovaná vrcholová hodnota bleskového proudu I v závislosti na třídě LPS?",
+    "options": {
+      "A": "I – 200 kA; II – 150 kA; III – 100 kA; IV – 100 kA",
+      "B": "I – 400 kA; II – 250 kA; III – 200 kA; IV – 50 kA",
+      "C": "I – 300 kA; II – 200 kA; III – 150 kA; IV – 100 kA"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "10",
+    "question": "Jaký je poloměr valící se koule r v závislosti na třídě LPS?",
+    "options": {
+      "A": "I – 20 m; II – 30 m; III – 45 m; IV – 60 m",
+      "B": "I – 10 m; II – 30 m; III – 45 m; IV – 45 m",
+      "C": "I – 10 m; II – 20 m; III – 30 m; IV – 45 m"
+    },
+    "correct": "C"
+  },  {
+    "id": "11",
+    "question": "V které části objektu se podle řady ČSN EN 62305 nacházejí zóny LPZ 0A a LPZ 0B?",
+    "options": {
+      "A": "vně objektu",
+      "B": "v prostoru uložení zemní soustavy",
+      "C": "uvnitř objektu"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "12",
+    "question": "Průběh bleskového proudu se podle řady ČSN EN 62305 označuje jako poměr T₁/T₂ (μs/μs). Co toto označení ve skutečnosti představuje?",
+    "options": {
+      "A": "vrcholová hodnota proudu / napětí na kovových částech",
+      "B": "doba čela / doba půltýlu",
+      "C": "čas před úderem blesku / čas po úderu blesku"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "13",
+    "question": "Čím je charakteristický dlouhý výboj?",
+    "options": {
+      "A": "vrcholovou hodnotou proudu a dobou trvání",
+      "B": "vrcholovou hodnotou proudu, dobou čela a půltýlu",
+      "C": "dobou trvání a nábojem výboje"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "14",
+    "question": "Co je považováno podle návrhu ochrany před bleskem za nebezpečný jev?",
+    "options": {
+      "A": "stavba objektu na vyvýšeném místě krajiny",
+      "B": "riziko ztrát na veřejných službách",
+      "C": "úder blesku do chráněné stavby nebo do její blízkosti"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "15",
+    "question": "Normy řady ČSN EN 62305 využívají v celém rozsahu zkrácené názvy. Co znamená označení LEMP?",
+    "options": {
+      "A": "rázová vlna způsobená bleskem",
+      "B": "stanovení velikosti a stupně poškození elektrických zařízení",
+      "C": "elektromagnetický impuls vyvolaný bleskem"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "16",
+    "question": "Jak je charakterizována rázová vlna?",
+    "options": {
+      "A": "jako mechanický úder způsobující mechanické poškození objektu",
+      "B": "jako stále trvající vlna mezi jednotlivými výboji",
+      "C": "jako přechodná vlna způsobená LEMP projevující se jako přepětí a/nebo impulsní proud"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "17",
+    "question": "Co je to přípustné riziko (RT) určované ve výpočtech?",
+    "options": {
+      "A": "minimální hodnota rizika, kterou je možno připustit pro chráněný objekt",
+      "B": "maximální hodnota rizika, kterou je možno připustit pro chráněnou stavbu",
+      "C": "průměrná hodnota rizika, kterou je možno připustit pro chráněný objekt"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "18",
+    "question": "Jak je charakterizován systém ochranných opatření proti LEMP?",
+    "options": {
+      "A": "komplexní systém ochranných opatření pro vnější a vnitřní ochrany před LEMP",
+      "B": "komplexní ochranný systém před účinky SPM",
+      "C": "opatření pro ochranu vnitřních systémů před účinky LEMP"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "19",
+    "question": "Jak jsou označovány základní typy škod při výpočtech?",
+    "options": {
+      "A": "D1 – úraz osoby; D2 – požár; D3 – porucha elektrických systémů",
+      "B": "D1 – úraz živých bytostí; D2 – hmotná škoda; D3 – porucha elektrických a elektronických systémů",
+      "C": "D1 – úraz živých bytostí; D2 – hmotná škoda; D3 – porucha hromosvodu"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "20",
+    "question": "Jaké základní typy ztrát rozeznáváme na chráněném objektu?",
+    "options": {
+      "A": "L1 – ztráty na lidských životech; L2 – ztráty na zvířatech; L3 – ztráty na kulturním dědictví; L4 – ztráty ekonomické hodnoty",
+      "B": "L1 – ztráty na lidských životech; L2 – ztráty na telekomunikačních službách; L3 – ztráty na hradech a zámcích; L4 – ztráty na rodinných domech",
+      "C": "L1 – ztráty na lidských životech; L2 – ztráty na veřejných službách; L3 – ztráty na kulturním dědictví"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "21",
+    "question": "Jak je definováno riziko R a co tato hodnota představuje?",
+    "options": {
+      "A": "hodnotu pravděpodobných průměrných ztrát způsobených přepětím",
+      "B": "hodnotu pravděpodobných průměrných ročních ztrát způsobených bleskem, vztaženou k celkové hodnotě objektu",
+      "C": "hodnotu na základě pojistné smlouvy"
+    },
+    "correct": "B"
+  },  {
+    "id": "22",
+    "question": "Součástí každého návrhu konstrukce ochrany před bleskem je stanovení rizika a škod podle ČSN EN 62305-2 ed. 2:2013. Jaké riziko ztrát R je stanovováno u staveb?",
+    "options": {
+      "A": "riziko ztrát na lidských životech, na veřejných službách, na kulturním dědictví a ztrát ekonomických hodnot",
+      "B": "riziko ztrát na životním prostředí a krajině v blízkosti objektu",
+      "C": "riziko ztrát na lesním porostu"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "23",
+    "question": "Na základě jakých údajů se rozhoduje o ochraně stavby před bleskem, stejně jako o výběru ochranných opatření?",
+    "options": {
+      "A": "na základě velikosti škod na okolních objektech",
+      "B": "na základě určení všech typů ztrát ve stavbě a příslušných odpovídajících rizik",
+      "C": "na základě rozhodnutí architekta a vzhledu stavby"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "24",
+    "question": "Co zahrnuje výpočet při oceňování rizika u stavby?",
+    "options": {
+      "A": "vlastní stavbu, instalace ve stavbě, obsah stavby, osoby uvnitř a vně do 3 m od stavby, prostředí ovlivňované poškozením stavby",
+      "B": "vlastní stavbu, instalace ve stavbě, obsah stavby, osoby uvnitř a vně stavby",
+      "C": "vlastní stavbu, osoby uvnitř, obsah stavby, prostředí ovlivňované poškozením stavby"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "25",
+    "question": "Co představuje vyjádření R = 10 na minus třetí při stanovování rizika?",
+    "options": {
+      "A": "že riziko je tisíckrát vyšší než obvykle",
+      "B": "že z rizikové události může dojít jednou za 1 000 let",
+      "C": "že škoda rizikové události přesahuje 1000 Kč"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "26",
+    "question": "Jaké riziko je povolené tam, kde údery blesku zahrnují ztráty na lidských životech?",
+    "options": {
+      "A": "10⁻⁵ (s nebezpečné události může dojít 1× za 100 000 let)",
+      "B": "10⁻¹ (k nebezpečné události může dojít 1× za 10 let)",
+      "C": "10⁻³ (k nebezpečné události může dojít 1× za 1 000 let)"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "27",
+    "question": "Kdo zodpovídá za stanovení velikosti rizika u objektu?",
+    "options": {
+      "A": "revizní technik",
+      "B": "za stanovení hodnoty přípustného rizika zodpovídá orgán, který má pro to kompetenci (provozovatel, majitel)",
+      "C": "architekt stavby a projektant elektrických zařízení a ochrany proti LPS"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "28",
+    "question": "Jaké postupy je nutné použít při zpracování projektové dokumentace LPS a k její následné kontrole při revizi?",
+    "options": {
+      "A": "postupy projednat vždy dohromady projektant s revizním technikem",
+      "B": "určit, zda je stavba v ochranném pásmu a jestli se LPS vyplatí zhotovit",
+      "C": "určit nejkritičtější součást rizika a snížit je také s uvažováním ekonomických hledisek"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "29",
+    "question": "Co představuje systém ochrany před bleskem LPS?",
+    "options": {
+      "A": "kompletní systém používaný pro snížení hmotných škod způsobených úderem blesku do stavby",
+      "B": "systém používaný pro určení škod způsobených úderem blesku",
+      "C": "vnější systém používaný pro snížení hmotných škod způsobených úderem blesku do stavby"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "30",
+    "question": "Z čeho se skládá vnější systém ochrany před bleskem (hromosvod)?",
+    "options": {
+      "A": "část LPS, se skládá z jímací soustavy, soustavy svodů a uzemnění",
+      "B": "část LPS, se skládá z jímací soustavy a uzemnění",
+      "C": "část LPS, se skládá z jímací soustavy a svodů"
+    },
+    "correct": "A"
+  },  {
+    "id": "31",
+    "question": "Čemu musí odpovídat vnější izolovaný (oddálený) LPS?",
+    "options": {
+      "A": "jímací soustava a svody jsou umístěny tak, aby dráha bleskového proudu byla v dotyku s chráněnou stavbou jen omezeně",
+      "B": "jímací soustava a svody jsou umístěny tak, aby dráha bleskového proudu nebyla v dotyku s chráněnou stavbou",
+      "C": "jímací soustava je umístěna tak, aby dráha bleskového proudu nebyla v dotyku s chráněnou stavbou"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "32",
+    "question": "Čemu musí odpovídat vnější neizolovaný (neoddálený) LPS?",
+    "options": {
+      "A": "jímací soustava a svody jsou umístěny tak, že dráha bleskového proudu může být v dotyku s chráněnou stavbou",
+      "B": "jímací soustava a svody jsou umístěny tak, že dráha bleskového proudu nemůže být v dotyku s chráněnou stavbou",
+      "C": "jímací soustava je umístěna tak, aby byla v dotyku s chráněnou stavbou"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "33",
+    "question": "Co je náhodná součást LPS?",
+    "options": {
+      "A": "vodivá součást, která nebyla instalována pro ochranu před bleskem, ale která byla dodatečně použita k LPS nebo může v mnohých případech jednou nebo více částmi zabezpečit funkci LPS",
+      "B": "vodivá součást instalovaná pro ochranu před bleskem, která byla dodatečně k LPS použita",
+      "C": "vodivá součást, která nebyla instalována pro ochranu před bleskem, ale která může v mnohých"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "34",
+    "question": "Co je ekvipotenciální pospojování proti blesku (vyrovnání potenciálů při působení blesku) označované EB?",
+    "options": {
+      "A": "připojení náhodných kovových prvků k LPS nepřímým vodivým spojením (např. bleskosvůtkou)",
+      "B": "připojení všech kovových prvků k LPS přímým i nepřímým vodivým spojením nebo přes přepěťové ochranné prvky určené pro snížení rozdílů potenciálů",
+      "C": "připojení oddělených kovových prvků k LPS přímým vodivým spojením nebo připojením přes přepěťové ochranné zařízení pro snížení rozdílů potenciálů způsobeným bleskovým proudem"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "35",
+    "question": "K čemu slouží sběrnice pospojování (připojení vyrovnání potenciálů)?",
+    "options": {
+      "A": "kovová sběrnice, přes kterou se vybraně vodiče částí z objektu spojují s LPS",
+      "B": "kovová sběrnice, přes kterou mohou být kovové instalace, vstupující vodiče částí do objektu, napájecí síť nn, telekomunikační vedení a jiná kabelová vedení spojena s LPS",
+      "C": "kovová sběrnice, přes kterou mohou být instalace, napájecí síť nn, telekomunikační vedení a jiná kabelová vedení spojena s LPS"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "36",
+    "question": "Jaká data (parametry) jsou závislá na třídě LPS? (Poznámka: Čím je LPS charakterizována?)",
+    "options": {
+      "A": "parametry blesku, poloměr valící se koule, velikost ok a ochranným úhlem, vodiči, minimální délkou zemničů",
+      "B": "materiál LPS a minimální rozměry spojovacích vodičů",
+      "C": "ekvipotenciální pospojování proti blesku, materiál, tvary a minimální rozměry jímací soustavy, svodů a uzemňovací soustavy"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "37",
+    "question": "Může technicky a ekonomicky optimalizovaný návrh ochrany před bleskem (LPS) využívat kovových konstrukcí v objektu?",
+    "options": {
+      "A": "projekt stavby může využít kovové konstrukce pouze u železobetonových staveb spojených se základovým zemničením",
+      "B": "projekt stavby by měl především využít kovové konstrukce stavby jako součásti LPS",
+      "C": "projekt stavby nesmí využívat kovové konstrukce, naopak musí dbát na dodržení dostatečné vzdálenosti konstrukcí od LPS"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "38",
+    "question": "U staveb ze železobetonu musí být elektrické propojení armování stanoveno elektrickou zkouškou mezi nejvhodnějším dílem a úrovní země. Jaká má být hodnota elektrického odporu, aby mohlo být použito celkové armování železobetonu?",
+    "options": {
+      "A": "celkový elektrický odpor nesmí být menší než 0,2 Ω",
+      "B": "celkový elektrický odpor nesmí být větší než 0,2 Ω",
+      "C": "celkový elektrický odpor by měl být menší než 0,2 Ω"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "39",
+    "question": "Pokud použijeme ve stavbách z železobetonu pro návrh LPS ocelové armování, je nutné elektrické propojení svislých a vodorovných prutů svařením nebo jiný způsob spojení. Kdo stanovuje takovéto konstrukční uspořádání?",
+    "options": {
+      "A": "projektant nebo montážní organizace ve spolupráci se stavební firmou a stavebním inženýrem",
+      "B": "stavební dozor",
+      "C": "dodavatel železobetonových konstrukcí"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "40",
+    "question": "V jakých případech by měl být na chráněné stavbě použit izolovaný (oddálený) vnější LPS?",
+    "options": {
+      "A": "když tepelné účinky v místě úderu do částí, které nevedou bleskový proud, mohou způsobit škody",
+      "B": "když tepelné a výbušné účinky v místě úderu nebo ve vodičích, které vedou bleskový proud, nemohou způsobit škody na stavbě nebo na jejím vybavení",
+      "C": "když tepelné a výbušné účinky v místě úderu nebo ve vodičích, které vedou bleskový proud, mohou způsobit škody na stavbě nebo na jejím vybavení"
+    },
+    "correct": "C"
+  },  {
+    "id": "41",
+    "question": "Jaké části může obsahovat jímací soustava?",
+    "options": {
+      "A": "tyče, samostatně stojící stožáry, radioaktivní jímace, konstrukce objektu",
+      "B": "konstrukce objektu, zavěšená lana, náhodné svody",
+      "C": "tyče, zavěšená lana, mřížové vodiče, náhodné vodiče"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "42",
+    "question": "Jaké jsou přípustné metody pro stanovení umístění jímací soustavy?",
+    "options": {
+      "A": "metoda valící se koule, ostatní metody jsou pouze podpůrné pro dosažení lepších výsledků LPS",
+      "B": "metoda ochranného úhlu, metoda valící se koule a metoda mřížové soustavy",
+      "C": "metoda mřížové soustavy a metoda ochranného úhlu s maximálním úhlem 112°, u aktivních jímaců max 120°"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "43",
+    "question": "Jaký je přípustný vrcholový úhel pro vyšetření jímací soustavy při metodě pomocí ochranného úhlu?",
+    "options": {
+      "A": "úhel není stanoven, je závislý na výšce objektu",
+      "B": "maximálně 112°",
+      "C": "maximálně 120°"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "44",
+    "question": "Jaké jsou přípustné poloměry valící se koule pro vyšetření jímací soustavy?",
+    "options": {
+      "A": "pro všechny třídy LPS je jednotný poloměr 30 m",
+      "B": "pro třídu LPS I – II je poloměr 10 až 40 m",
+      "C": "pro třídu LPS I – IV je poloměr 20 až 60 m"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "45",
+    "question": "Pro jaké případy stanovení umístění jímací soustavy je vhodná metoda valící se koule?",
+    "options": {
+      "A": "pro všechny případy",
+      "B": "pro ochranu jednoduchých staveb",
+      "C": "pro ochranu rovných střešních konstrukcí"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "46",
+    "question": "Pro jaké případy stanovení umístění jímací soustavy je vhodná metoda ochranného úhlu?",
+    "options": {
+      "A": "pro ochranu vysokých rovných střech",
+      "B": "pro všechny případy",
+      "C": "pro ochranu jednoduchých staveb, ale je ohraničena výškou"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "47",
+    "question": "Pro jaké případy stanovení umístění jímací soustavy je vhodná metoda mřížové soustavy?",
+    "options": {
+      "A": "pro ochranu jednoduchých staveb s nízkou výškou",
+      "B": "pro ochranu rovných ploch",
+      "C": "pro všechny případy"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "48",
+    "question": "U jakých staveb může vzniknout nebezpečí úderu do boku stavby?",
+    "options": {
+      "A": "u staveb s výškou nad 120 m",
+      "B": "u staveb s výškou 30 až 60 m",
+      "C": "u staveb s výškou nad 60 m"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "49",
+    "question": "V jakých případech mohou být vodiče jímací soustavy položeny na střeše stavby?",
+    "options": {
+      "A": "pokud je střecha z lehce hořlavého materiálu",
+      "B": "pokud je střecha z nehořlavého materiálu",
+      "C": "vodiče jímací soustavy nesmí přímo ležet na střeše stavby"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "50",
+    "question": "Jaké části stavby nemohou být považovány za náhodné jímace a součásti LPS?",
+    "options": {
+      "A": "kovová potrubí a nádrže na střeše z pozinkované oceli o tloušťce 4 mm",
+      "B": "kovová oplechování bude-li zajištěno trvalé elektrické propojení mezi různými díly",
+      "C": "kovová oplechování potažená izolační hmotou PVC o tloušťce minimálně 2 mm"
+    },
+    "correct": "C"
+  },  {
+    "id": "51",
+    "question": "Jak je nutno umísťovat svody, aby se snížila pravděpodobnost škod způsobených bleskem?",
+    "options": {
+      "A": "tak, aby mezi místem úderu blesku a zemí byla délka dráhy proudu co možná nejkratší",
+      "B": "v dostatečném množství a v místech podle požadavků architekta",
+      "C": "tak, aby všechny kovové části v blízkosti svodů byly připojeny"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "52",
+    "question": "Kolik svodů je nutno instalovat u izolovaného (oddáleného) LPS, je-li jímací soustava tvořena ze zavěšených drátů nebo lan?",
+    "options": {
+      "A": "je nutno pro každou nosnou konstrukci instalovat jeden svod",
+      "B": "minimálně jeden svod",
+      "C": "soustava se opatřuje vždy dvěma svody"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "53",
+    "question": "Kolik svodů je nutno instalovat u neizolovaného (neoddáleného) LPS?",
+    "options": {
+      "A": "jeden svod",
+      "B": "minimálně dva svody",
+      "C": "tři svody a více"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "54",
+    "question": "Jaké jsou typické hodnoty vzdálenosti mezi svody u neizolovaného (neoddáleného) LPS ve vztahu k třídám LPS?",
+    "options": {
+      "A": "třída LPS I - 10 m; třída LPS II a III - 15 m; třída LPS IV - 20 m",
+      "B": "třída LPS I - 10 m; třída LPS II - 15 m; třída LPS III a IV - 20 m",
+      "C": "třída LPS I a II - 10 m; třída LPS III - 15 m; třída LPS IV - 20 m"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "55",
+    "question": "Jakým požadavkům má odpovídat konstrukce a instalace svodů LPS?",
+    "options": {
+      "A": "vždy mají být vedeny souběžně, v těsné blízkosti a nebo v okapových svodech",
+      "B": "musí být instalovány přímo a svisle, aby bylo vytvořeno co nejkratší přímé spojení se zemí a musí být zabráněno vytvoření instalačních smyček",
+      "C": "musí být rozmístěny pokud možno tak, aby byla vytvořena co nejhustější ochranná síť na objektu"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "56",
+    "question": "Mohou se umístit svody neoddáleného LPS na stěnu z lehce hořlavého materiálu?",
+    "options": {
+      "A": "nesmí se umisťovat na stěny z lehce hořlavého materiálu",
+      "B": "svody se smí umisťovat na stěny z lehce hořlavého materiálu, jen pokud zvýšení teploty způsobené průchodem bleskového proudu není nebezpečné s ohledem na materiál stěny",
+      "C": "svody se smí umisťovat na stěny z lehce hořlavého materiálu, za předpokladu, že v nebezpečných částech je vzdálenost od stěny a stínu zvětšena na minimálně 0,2 m"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "57",
+    "question": "Které náhodné části stavby by neměly být považovány za náhodné svody?",
+    "options": {
+      "A": "kovové instalace za předpokladu, že elektricky vodivá spojení mezi různými částmi jsou provedena trvale",
+      "B": "kovové oplechování nebo kovová potrubí o tloušťce minimálně 0,2 mm",
+      "C": "profilové lišty a kovové spodní konstrukce fasády o tloušťce minimálně 0,5 mm"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "58",
+    "question": "Kde by měly být umístěny zkušební spojky na svodech LPS?",
+    "options": {
+      "A": "vždy nad zemí",
+      "B": "na každém připojení svodu k uzemňovací soustavě",
+      "C": "na náhodných svodech, které jsou spojeny se základovým zemničem"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "59",
+    "question": "Jaká je doporučovaná hodnota zemního odporu zemniče pro LPS měřená při nízkém kmitočtu?",
+    "options": {
+      "A": "nižší než 15 Ω",
+      "B": "nižší než 5 Ω",
+      "C": "nižší než 10 Ω"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "60",
+    "question": "Jaký smí být nejmenší celkový počet zemničů (uspořádaných z vodorovných nebo svislých zemničů) v uspořádání typu A instalovaného vně chráněné stavby?",
+    "options": {
+      "A": "stačí jeden základový zemnič",
+      "B": "nesmí být nižší než dva",
+      "C": "nejméně tři"
+    },
+    "correct": "B"
+  },  {
+    "id": "61",
+    "question": "Z čeho se skládá uzemňovací soustava v uspořádání typu A?",
+    "options": {
+      "A": "ze základového zemniče a minimálně dvou náhodných zemničů",
+      "B": "z vodorovného nebo svislého zemniče napojeného na základový zemnič",
+      "C": "z vodorovného nebo svislého zemniče, instalovaného vně chráněné stavby, který je spojen s každým"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "62",
+    "question": "Z čeho se skládá obvodová uzemňovací soustava vně objektu v uspořádání typu B?",
+    "options": {
+      "A": "z obvodového zemniče vně chráněného objektu, který je uložen minimálně 80 % své celkové délky v zemi, nebo ze základového zemniče tvořícího uzavřenou smyčku",
+      "B": "z vodorovného nebo svislého zemniče instalovaného vně chráněné stavby, který je spojen s každým svodem",
+      "C": "ze základového zemniče a minimálně dvou náhodných zemničů spojených s každým svodem"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "63",
+    "question": "V jaké hloubce a vzdálenosti od zdi objektu má být přednostně uložen obvodový zemnič typu B?",
+    "options": {
+      "A": "v hloubce minimálně 0,3 m v zemi a ve vzdálenosti minimálně 0,5 m od vnitřních zdí objektu",
+      "B": "v hloubce minimálně 0,5 m v zemi ve vzdálenosti asi 1 m od vnějších zdí objektu",
+      "C": "v hloubce minimálně 1 m v zemi a ve vzdálenosti asi 1,5 m od vnějších zdí objektu"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "64",
+    "question": "Jaké zemniče se mají přednostně používat jako zemniče náhodné?",
+    "options": {
+      "A": "zapuštěné nosníky stavby a uzemňovací tyče",
+      "B": "vzájemně spojené ocelové armování v základovém betonu nebo jiné vhodné podzemní kovové konstrukce",
+      "C": "vzájemně spojené ocelové armování a přicházející a odcházející potrubí"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "65",
+    "question": "Jaké spoje se provádí na uzemnění k zařízení LPS?",
+    "options": {
+      "A": "výhradně svařováním a pájením natvrdo",
+      "B": "šroubováním nebo nýtováním, tyto spoje nesmí být použity v zemi",
+      "C": "pájením natvrdo, svařováním, svorkováním, lisováním, falcováním, šroubováním nebo nýtováním"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "66",
+    "question": "K jakým účelům se zřizuje vnitřní systém LPS?",
+    "options": {
+      "A": "musí zabránit nebezpečným jiskřením uvnitř chráněné stavby, které mohou být způsobena průchodem bleskového proudu",
+      "B": "musí zabránit, aby nedošlo k poškozením napětí do ekvipotenciálního pospojování",
+      "C": "musí zabránit, aby nedošlo k úderu blesku do stavby"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "67",
+    "question": "Jakým způsobem lze dosáhnout při ekvipotenciálním pospojování proti blesku vyrovnání potenciálů s LPS?",
+    "options": {
+      "A": "vzájemným propojením LPS a ochranných vodičů",
+      "B": "musí se vždy zabránit, aby nedošlo k úderu blesku do vnějších vodivých částí a do vedení připojených ke stavbě",
+      "C": "vzájemným propojením LPS s kovovými částmi stavby, kovovými instalacemi a vnitřními systémy"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "68",
+    "question": "Kde se provádí ekvipotenciální pospojování proti blesku pro vnější vodivé části?",
+    "options": {
+      "A": "co možná nejblíže vstupu chráněné stavby",
+      "B": "v prvním dostupném rozvaděči",
+      "C": "možné nejblíže vstupu chráněné stavby, kde jsou umístěny ostatní sítě"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "69",
+    "question": "Jak se vypočte dostatečná vzdálenost mezi jímací soustavou a kovovými částmi stavby?",
+    "options": {
+      "A": "S = (ki / km) · kc · l",
+      "B": "S = ki · kc · km",
+      "C": "S ≥ 0,2 R + 0,1 h"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "70",
+    "question": "Jaký je účel revize LPS?",
+    "options": {
+      "A": "vyhodnotit spolehlivost zařízení LPS",
+      "B": "zjistit, zda projekt LPS a montáž LPS odpovídá normě ČSN EN 62305",
+      "C": "zjistit, zda nové přidané inženýrské sítě mají vlastní dokumentaci"
+    },
+    "correct": "B"
+  },  {
+    "id": "71",
+    "question": "Kdo má provádět revizi zařízení LPS?",
+    "options": {
+      "A": "revizní technik elektro, odborně způsobilá osoba v elektrotechnice",
+      "B": "projektant LPS",
+      "C": "jakýkoli elektrikář s §6 podle vyhlášky",
+    },
+    "correct": "A"
+  },
+  {
+    "id": "72",
+    "question": "Jak často se má provádět pravidelná revize LPS?",
+    "options": {
+      "A": "1× za 2 roky",
+      "B": "v závislosti na třídě LPS – každé 2, 4 nebo 5 let",
+      "C": "každoročně"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "73",
+    "question": "Co je předmětem pravidelné revize LPS?",
+    "options": {
+      "A": "kontrola celistvosti a spojení hromosvodu",
+      "B": "kontrola všech spojů a přechodových odporů, zda nedošlo k mechanickému poškození nebo korozi",
+      "C": "kontrola celistvosti hromosvodu, správnost jímací soustavy, svodů a uzemnění a záznam do revizní zprávy"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "74",
+    "question": "Kdy je nutné provést mimořádnou revizi LPS?",
+    "options": {
+      "A": "po každém zásahu blesku nebo po zásadní rekonstrukci stavby či LPS",
+      "B": "každý rok v létě",
+      "C": "při podezření na korozní poškození"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "75",
+    "question": "Jaké dokumenty jsou nezbytné pro provedení revize LPS?",
+    "options": {
+      "A": "projektová dokumentace, protokoly o měření, předchozí revizní zprávy",
+      "B": "jen projekt LPS",
+      "C": "stačí záznam v provozním deníku"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "76",
+    "question": "Jaké údaje by měla obsahovat revizní zpráva LPS?",
+    "options": {
+      "A": "popis stavu LPS, výsledky měření, závěr o bezpečnosti a návrh opatření",
+      "B": "pouze záznam o odporu zemniče",
+      "C": "jen razítko revizního technika"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "77",
+    "question": "Kdo odpovídá za zajištění provozuschopnosti LPS?",
+    "options": {
+      "A": "revizní technik",
+      "B": "majitel nebo provozovatel objektu",
+      "C": "projektant"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "78",
+    "question": "Jaký je hlavní účel použití přepěťových ochranných zařízení SPD?",
+    "options": {
+      "A": "chránit elektrické a elektronické zařízení před přepětím způsobeným bleskem nebo spínacími jevy",
+      "B": "omezit proud v obvodech",
+      "C": "snížit elektromagnetické rušení"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "79",
+    "question": "Jaké jsou základní třídy SPD podle ČSN EN 61643-11?",
+    "options": {
+      "A": "Třída A, B, C",
+      "B": "Typ 1, Typ 2, Typ 3",
+      "C": "Skupina I, II, III"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "80",
+    "question": "Kam se instaluje SPD typu 1?",
+    "options": {
+      "A": "co nejblíže k chráněnému zařízení",
+      "B": "do podružného rozvaděče",
+      "C": "na vstup elektrické instalace do objektu – hlavní rozvaděč"
+    },
+    "correct": "C"
+  },  {
+    "id": "81",
+    "question": "Jaká je funkce SPD typu 2?",
+    "options": {
+      "A": "ochrana proti přímému úderu blesku",
+      "B": "ochrana před přepětím uvnitř objektu (např. spínací jevy)",
+      "C": "ochrana citlivé elektroniky na koncových zařízeních"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "82",
+    "question": "Kde se instaluje SPD typu 3?",
+    "options": {
+      "A": "vždy na střechu objektu",
+      "B": "co nejblíže chráněnému zařízení, např. do zásuvky nebo datového rozvaděče",
+      "C": "pouze do hlavního rozvaděče"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "83",
+    "question": "Jaké parametry se sledují při výběru SPD?",
+    "options": {
+      "A": "napětí a frekvence",
+      "B": "napětí, vybavovací doba, jmenovitý vybíjecí proud, úrovně ochrany",
+      "C": "pouze proudová zatížitelnost"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "84",
+    "question": "K čemu slouží koordinační vzdálenosti mezi SPD typu 2 a typu 3?",
+    "options": {
+      "A": "k lepšímu proudovému dimenzování",
+      "B": "k zajištění správné koordinace úrovní ochrany mezi SPD",
+      "C": "k zabránění galvanického spojení"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "85",
+    "question": "Jaký je doporučený minimální průřez vodiče mezi SPD a hlavní pospojovací sběrnicí?",
+    "options": {
+      "A": "1,5 mm² Cu",
+      "B": "10 mm² Cu",
+      "C": "4 mm² Al"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "86",
+    "question": "Jaký je hlavní rozdíl mezi SPD typ 1 a SPD typ 2?",
+    "options": {
+      "A": "SPD typ 1 chrání proti přímým úderům blesku, SPD typ 2 proti spínacím přepětím",
+      "B": "SPD typ 1 je menší a levnější",
+      "C": "SPD typ 1 se používá jen ve venkovním prostředí"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "87",
+    "question": "Co je charakteristické pro SPD s jiskřištěm?",
+    "options": {
+      "A": "vysoká zbytková napětí, ale velmi vysoká odolnost proti proudům",
+      "B": "nízká zbytková napětí, vhodné pro jemnou elektroniku",
+      "C": "nelze použít pro bleskové proudy"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "88",
+    "question": "Co je zbytkové napětí SPD (Up)?",
+    "options": {
+      "A": "napětí, které SPD propustí dál za sebe při vybavení",
+      "B": "napětí, při kterém SPD vybaví",
+      "C": "napětí, pod kterým SPD trvale pracuje"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "89",
+    "question": "Jak se značí jmenovitý vybíjecí proud SPD typu 2?",
+    "options": {
+      "A": "In",
+      "B": "Imax",
+      "C": "Ip"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "90",
+    "question": "Co znamená zkratka LEMP v ochraně před bleskem?",
+    "options": {
+      "A": "Lightning Electromagnetic Pulse – elektromagnetický impuls blesku",
+      "B": "Lightning Energy Management Protection – systém ochrany energie",
+      "C": "Low Energy Magnetic Protection – nízkonapěťová magnetická ochrana"
+    },
+    "correct": "A"
+  },  {
+    "id": "91",
+    "question": "Co znamená zkratka EMC?",
+    "options": {
+      "A": "Elektrická modulace cyklu",
+      "B": "Elektromagnetická kompatibilita",
+      "C": "Elektromechanická citlivost"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "92",
+    "question": "Jaká opatření se používají ke zvýšení EMC v elektrických instalacích?",
+    "options": {
+      "A": "stínění, uzemnění, filtrace, rozdělení vedení",
+      "B": "použití vyšších proudů a napětí",
+      "C": "zkrácení napájecích kabelů"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "93",
+    "question": "Jak se nazývá soustava opatření, která chrání elektroniku před účinky blesku?",
+    "options": {
+      "A": "vnější ochrana před bleskem",
+      "B": "vnitřní ochrana před bleskem",
+      "C": "ochrana před LEMP"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "94",
+    "question": "Které normy se vztahují k ochraně před bleskem?",
+    "options": {
+      "A": "ČSN EN 62305-1 až 4",
+      "B": "ČSN EN 60728",
+      "C": "ČSN EN 60364-5-54"
+    },
+    "correct": "A"
+  },
+  {
+    "id": "95",
+    "question": "Jaká třída LPS zajišťuje nejvyšší úroveň ochrany?",
+    "options": {
+      "A": "LPS III",
+      "B": "LPS II",
+      "C": "LPS I"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "96",
+    "question": "Co je to valící se koule ve vztahu k LPS?",
+    "options": {
+      "A": "metoda pro stanovení umístění svodů",
+      "B": "pomůcka pro určení ochranné zóny jímací soustavy",
+      "C": "část zemnicí soustavy"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "97",
+    "question": "Jaká je minimální doporučená délka uzemňovacího vodiče typu B?",
+    "options": {
+      "A": "10 m",
+      "B": "15 m",
+      "C": "20 m"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "98",
+    "question": "Jaká barva se obvykle používá pro označení ochranného vodiče?",
+    "options": {
+      "A": "modrá",
+      "B": "zelenožlutá",
+      "C": "červená"
+    },
+    "correct": "B"
+  },
+  {
+    "id": "99",
+    "question": "K čemu slouží ochranná zóna LPS?",
+    "options": {
+      "A": "k ochraně osob před úrazem elektrickým proudem",
+      "B": "k omezení výskytu požárů",
+      "C": "k ochraně prostoru, ve kterém je sníženo riziko zásahu bleskem"
+    },
+    "correct": "C"
+  },
+  {
+    "id": "100",
+    "question": "Který typ vodiče se používá pro připojení jímací soustavy k uzemnění?",
+    "options": {
+      "A": "nulový vodič",
+      "B": "svod",
+      "C": "PE vodič"
+    },
+    "correct": "B"
+  }
+];
+  
+];
         let currentQuestion = null;
 
         function loadQuestion() {
